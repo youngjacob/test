@@ -26,6 +26,7 @@ class DropsController < ApplicationController
   def create
     @drop = Drop.new(drop_params)
 
+
     respond_to do |format|
       if @drop.save
         format.html { redirect_to @drop, notice: 'Drop was successfully created.' }
